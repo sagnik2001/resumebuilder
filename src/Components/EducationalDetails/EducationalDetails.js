@@ -11,6 +11,8 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { FcPrevious } from "react-icons/fc";
 import {FcNext} from "react-icons/fc"
+import {BsCheckSquareFill} from "react-icons/bs"
+import "./EducationalDetails.css"
 const EducationalDetails=(props)=>{
   const nextStep=(e)=>{
     e.preventDefault();
@@ -31,12 +33,18 @@ const EducationalDetails=(props)=>{
           <Header/>
             <Card sx={{ maxWidth: 345 }} className="card">
             <CardHeader
-                 title="Project Info"
+                 title="Projects Info"
                  titleTypographyProps={{variant:'h3' }}
             />
             <Divider style={style}/>
             <CardContent  >
+              <div  className="header1" style={{display: 'flex'}}>
+                    <BsCheckSquareFill style={{marginTop:"30px",marginRight:"5px"}} size="30px"/>
+                   <h1 >1</h1>
+              </div>
+
               <div  className="TextField1">
+
                 <TextField
                   placeholder="Enter Your Project Name"
                       name="ProjTitles"
@@ -66,6 +74,10 @@ const EducationalDetails=(props)=>{
 
             </CardContent>
             <CardContent  >
+              <div  className="header1" style={{display: 'flex'}}>
+                    <BsCheckSquareFill style={{marginTop:"30px",marginRight:"5px"}} size="30px"/>
+                   <h1 > 2</h1>
+              </div>
               <div  className="TextField1">
                 <TextField
                   placeholder="Enter Your Project Name"

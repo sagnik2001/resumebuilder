@@ -2,6 +2,7 @@ import {React,useState} from 'react';
 import PersonalDetails from './PersonalDetails/PersonalDetails.js';
 import EducationalDetails from "./EducationalDetails/EducationalDetails.js"
 import SchoolDetails from "./SchoolDetails/SchoolDetails.js"
+import Accomplishment from "./Accomplishment/Accomplishment.js"
 const UserForm=()=>{
   // States And Fields for different descriptions
   const [step,Setstep]=useState(1);
@@ -22,6 +23,18 @@ const UserForm=()=>{
      Year: '',
      SchoolQualifications: '',
      SchoolDescription: '',
+     Uni:'',
+     UniDesc:'',
+     UniQualifications:'',
+     UniYear: '',
+     Internship1:'',
+     Internship1details:'',
+     Internship1Location: '',
+     Internship1Year: '',
+     Internship2:'',
+     Internship2details:'',
+     Internship2Location: '',
+     Internship2Year: '',
      lang: '',
      hobbie: '',
      activities: '',
@@ -36,15 +49,18 @@ const UserForm=()=>{
   }
   // onChangeHandler Input Fields
   const onChangeHandler =(e)=>{
-    const name = e.target.name
-    const value = e.target.value
+
+
+    const { name, value } = e.target;
+
     setinput({
-      ...input,
-      [name]: value
-    })
+    ...input,
+      [name]: value,
+    });
 
   }
 
+console.log(input);
   const values={
     name:input.name,
     email:input.email,
@@ -62,9 +78,21 @@ const UserForm=()=>{
     Year:input.Year,
     SchoolQualifications:input.SchoolQualifications,
     SchoolDescription:input.SchoolDescription,
+    Uni:input.Uni,
+    UniQualifications:input.UniQualifications,
+    UniDesc:input.UniDesc,
+    UniYear:input.UniYear,
     lang:input.lang,
     hobbie:input.hobbie,
     activities:input.activities,
+    Internship1:input.Internship1,
+    Internship1Year:input.Internship1Year,
+    Internship1Location:input.Internship1Location,
+    Internship1details:input.Internship1details,
+    Internship2:input.Internship2,
+    Internship2Location:input.Internship2Location,
+    Internship2Year:input.Internship2Year,
+    Internship2details:input.Internship2details,
   }
   function SwitchCase(props) {
     switch (props.value) {
@@ -88,6 +116,15 @@ const UserForm=()=>{
          case 3:
          return(
            <SchoolDetails
+             prevStep={previousHandler}
+             nextStep={nextHandler}
+             handleChange={onChangeHandler}
+             values={values}
+             />
+         )
+         case 4:
+         return(
+           <Accomplishment
              prevStep={previousHandler}
              nextStep={nextHandler}
              handleChange={onChangeHandler}

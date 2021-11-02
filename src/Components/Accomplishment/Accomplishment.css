@@ -1,9 +1,9 @@
 @media (min-width: 768px){
   .TextField1{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    margin-bottom: 10px;
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-direction: row !important;
+    margin-bottom: 10px !important;
   }
 
 }
