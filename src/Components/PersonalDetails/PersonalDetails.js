@@ -11,6 +11,7 @@ import Divider from "@material-ui/core/Divider";
 import TextField from "@material-ui/core/TextField";
 import "./PersonalDetails.css"
 import Button from "@material-ui/core/Button";
+import {FcNext} from "react-icons/fc"
 const PersonalDetails=(props)=>{
   const style = {
     marginLeft: '10vw',
@@ -89,7 +90,7 @@ const PersonalDetails=(props)=>{
              />
            </CardContent>
 
-            <Button variant="outlined" onClick={nextStep} className="buttons">Continue</Button>
+            <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
 
 </Card>
       </React.Fragment>
