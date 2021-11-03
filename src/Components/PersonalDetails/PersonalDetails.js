@@ -89,8 +89,8 @@ const PersonalDetails=(props)=>{
                  onChange={handleChange}
              />
            </CardContent>
+       <div><Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button></div>
 
-            <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
 
 </Card>
       </React.Fragment>

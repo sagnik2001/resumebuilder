@@ -39,7 +39,7 @@ const Accomplishment = (props) => {
             <Divider style={style}/>
             <CardContent  >
               <div  className="header1" style={{display: 'flex'}}>
-                    <BsCheckSquareFill style={{marginTop:"30px",marginRight:"5px"}} size="30px"/>
+                    <BsCheckSquareFill style={{marginTop:"1%",marginRight:"5px"}} size="30px"/>
                    <h1 >1</h1>
               </div>
 
@@ -86,7 +86,7 @@ const Accomplishment = (props) => {
             </CardContent>
             <CardContent  >
               <div  className="header1" style={{display: 'flex'}}>
-                    <BsCheckSquareFill style={{marginTop:"30px",marginRight:"5px"}} size="30px"/>
+                    <BsCheckSquareFill style={{marginTop:"1%",marginRight:"5px"}} size="30px"/>
                    <h1 >2</h1>
               </div>
 
@@ -131,8 +131,11 @@ const Accomplishment = (props) => {
                 />
 
             </CardContent>
-            <Button variant="outlined" onClick={prevStep} className="buttons"><FcPrevious/> Previous </Button>
-            <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
+            <div>
+              <Button variant="outlined" onClick={prevStep} className="buttons"><FcPrevious/> Previous </Button>
+              <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
+            </div>
+
             </Card>
 
         </React.Fragment>

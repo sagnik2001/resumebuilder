@@ -39,7 +39,7 @@ const EducationalDetails=(props)=>{
             <Divider style={style}/>
             <CardContent  >
               <div  className="header1" style={{display: 'flex'}}>
-                    <BsCheckSquareFill style={{marginTop:"30px",marginRight:"5px"}} size="30px"/>
+                    <BsCheckSquareFill style={{marginTop:"1%",marginRight:"5px"}} size="30px"/>
                    <h1 >1</h1>
               </div>
 
@@ -55,7 +55,7 @@ const EducationalDetails=(props)=>{
                   />
                 <TextField
                   placeholder="Project Link"
-                      name="ProjTitles"
+                      name="ProjLinks"
                       defaultValue={values.ProjLinks}
                       type="url"
                         label="Enter Your Project Link"
@@ -75,7 +75,7 @@ const EducationalDetails=(props)=>{
             </CardContent>
             <CardContent  >
               <div  className="header1" style={{display: 'flex'}}>
-                    <BsCheckSquareFill style={{marginTop:"30px",marginRight:"5px"}} size="30px"/>
+                    <BsCheckSquareFill style={{marginTop:"1%",marginRight:"5px"}} size="30px"/>
                    <h1 > 2</h1>
               </div>
               <div  className="TextField1">
@@ -89,7 +89,7 @@ const EducationalDetails=(props)=>{
                   />
                 <TextField
                   placeholder="Project Link"
-                      name="ProjTitles1"
+                      name="ProjLinks1"
                       defaultValue={values.ProjLinks1}
                       type="url"
                         label="Enter Your Project Link"
@@ -107,8 +107,11 @@ const EducationalDetails=(props)=>{
                 />
 
             </CardContent>
-                <Button variant="outlined" onClick={prevStep} className="buttons"><FcPrevious/> Previous </Button>
-                <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
+            <div>
+              <Button variant="outlined" onClick={prevStep} className="buttons"><FcPrevious/> Previous </Button>
+              <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
+            </div>
+
             </Card>
       </React.Fragment>
     </MuiThemeProvider>

@@ -3,9 +3,12 @@ import PersonalDetails from './PersonalDetails/PersonalDetails.js';
 import EducationalDetails from "./EducationalDetails/EducationalDetails.js"
 import SchoolDetails from "./SchoolDetails/SchoolDetails.js"
 import Accomplishment from "./Accomplishment/Accomplishment.js"
+import Misc from "./Miscallenous/Miscallenous.js"
+import Success from "./Success.js"
 const UserForm=()=>{
   // States And Fields for different descriptions
   const [step,Setstep]=useState(1);
+
   const [input,setinput] = useState({
      name: '',
      email: '',
@@ -127,6 +130,23 @@ console.log(input);
            <Accomplishment
              prevStep={previousHandler}
              nextStep={nextHandler}
+             handleChange={onChangeHandler}
+             values={values}
+             />
+         )
+         case 5:
+         return(
+           <Misc
+             prevStep={previousHandler}
+             nextStep={nextHandler}
+             handleChange={onChangeHandler}
+             values={values}
+             />
+         )
+         case 6:
+         return(
+           <Success
+
              handleChange={onChangeHandler}
              values={values}
              />

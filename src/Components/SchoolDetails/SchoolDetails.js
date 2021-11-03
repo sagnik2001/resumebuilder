@@ -39,7 +39,7 @@ function SchoolDetails(props) {
               <CardContent  >
                 <div  className="TextField1">
                   <TextField
-                    autoFocus={true}
+
                     placeholder="Enter Your School Name"
                         name="School"
                         defaultValue={values.School}
@@ -85,7 +85,7 @@ function SchoolDetails(props) {
                     multiline={true}
        rows={2}
                     placeholder="Enter Your University Name"
-                        name="University"
+                        name="Uni"
                         defaultValue={values.Uni}
                         type="text"
                           label="Enter Your University Name"
@@ -123,8 +123,11 @@ function SchoolDetails(props) {
                   />
 
               </CardContent>
-              <Button variant="outlined" onClick={prevStep} className="buttons"><FcPrevious/> Previous </Button>
-              <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
+              <div>
+                <Button variant="outlined" onClick={prevStep} className="buttons"><FcPrevious/> Previous </Button>
+                <Button variant="outlined" onClick={nextStep} className="buttons">Continue <FcNext/> </Button>
+              </div>
+
             </Card>
       </React.Fragment>
     </MuiThemeProvider>
